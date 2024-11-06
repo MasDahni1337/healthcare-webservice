@@ -23,7 +23,7 @@ class Database extends Service {
         database: process.env.DB_DEFAULT_DATABASE,
         timezone: '+07:00',
         charset: 'utf8',
-        port: process.env.DB_DEFAULT_PORT
+        port: parseInt(process.env.DB_DEFAULT_PORT, 10)
       },
       pool: {
         min: 0,

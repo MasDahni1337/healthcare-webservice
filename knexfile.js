@@ -1,4 +1,4 @@
-// Update with your config settings.
+require("env2")(".env");
 
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
@@ -8,11 +8,11 @@ module.exports = {
   development: {
     client: 'pg',
     connection: {
-      host: 'localhost',
-      user: 'dahni',
-      password: '1',
-      database: 'healthcare',
-      port: 5432
+      host: process.env.DB_DEFAULT_HOST,
+      user: process.env.DB_DEFAULT_USERNAME,
+      password: process.env.DB_DEFAULT_PASSWORD,
+      database: process.env.DB_DEFAULT_DATABASE,
+      port: parseInt(process.env.DB_DEFAULT_PORT, 10)
     },
     migrations: {
       directory: './app/Database/Migrations'
@@ -25,11 +25,11 @@ module.exports = {
   staging: {
     client: 'pg',
     connection: {
-      host: 'localhost',
-      user: 'dahni',
-      password: '1',
-      database: 'healthcare',
-      port: 5432
+      host: process.env.DB_DEFAULT_HOST,
+      user: process.env.DB_DEFAULT_USERNAME,
+      password: process.env.DB_DEFAULT_PASSWORD,
+      database: process.env.DB_DEFAULT_DATABASE,
+      port: parseInt(process.env.DB_DEFAULT_PORT, 10)
     },
     migrations: {
       directory: './app/Database/Migrations'
@@ -42,11 +42,11 @@ module.exports = {
   production: {
     client: 'pg',
     connection: {
-      host: 'localhost',
-      user: 'dahni',
-      password: '1',
-      database: 'healthcare',
-      port: 5432
+      host: process.env.DB_DEFAULT_HOST,
+      user: process.env.DB_DEFAULT_USERNAME,
+      password: process.env.DB_DEFAULT_PASSWORD,
+      database: process.env.DB_DEFAULT_DATABASE,
+      port: parseInt(process.env.DB_DEFAULT_PORT, 10)
     },
     migrations: {
       directory: './app/Database/Migrations'
