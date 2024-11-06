@@ -1,0 +1,16 @@
+#--------------------------------------------------------------------
+# ENVIRONMENT
+#--------------------------------------------------------------------
+# DATABASE
+#--------------------------------------------------------------------
+DB_DEFAULT_HOST = localhost
+DB_DEFAULT_DATABASE = database
+DB_DEFAULT_USERNAME = username
+DB_DEFAULT_PASSWORD = password
+DB_DEFAULT_PORT = port
+
+# SATU SEHAT
+SS_CLIENT_ID = client_id
+SS_CLIENT_SECRET = client_secret
+SS_SANBDOX_HOST = https://api-satusehat-stg.dto.kemkes.go.id
+SS_PROD_HOST = https://api-satusehat.kemkes.go.id
